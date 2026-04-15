@@ -58,9 +58,9 @@ time_taken = end_time - start_time
 words = len(code.split())
 
 if output.strip() == "hello":
-    print("✅ Correct Answer")
+    print("Correct Answer")
 else:
-    print("❌ Wrong Answer")
+    print("Wrong Answer")
 # WPM calculation
 wpm = (words / time_taken) * 60 if time_taken > 0 else 0
 print("wpm",wpm)
