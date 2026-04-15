@@ -1,6 +1,8 @@
 import time
 import subprocess
-
+from timer import Timer
+timer=Timer()
+timer.start()
 print("Start coding below (press ENTER twice to finish):\n")
 
 # Start time
@@ -24,7 +26,8 @@ with open("user_code.py", "w") as f:
 
 # Take input for the program
 print("\nEnter input for your program (press ENTER twice to finish):")
-
+end_time = time.time()
+timer.stop()
 inputs = []
 while True:
     line = input()
@@ -54,9 +57,11 @@ time_taken = end_time - start_time
 # Word count
 words = len(code.split())
 
-if output.strip() == expected_output:
+if output.strip() == "hello":
     print("✅ Correct Answer")
 else:
     print("❌ Wrong Answer")
 # WPM calculation
 wpm = (words / time_taken) * 60 if time_taken > 0 else 0
+print("wpm",wpm)
+print("time taken",time_taken)
