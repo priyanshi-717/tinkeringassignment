@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Note App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1><img src="Screenshot (422).png"> Note Taking App</h1>
+
+<div class="container">
+    <input type="text" id="title" placeholder="Title">
+    <textarea id="content" placeholder="Write your note..."></textarea>
+    <div class="toolbar">
+        <button onclick="setTool('pencil')">Pencil</button>
+        <button onclick="setTool('eraser')">Eraser</button>
+
+        <input type="color" id="colorPicker">
+        <input type="range" id="brushSize" min="1" max="20" value="2">
+
+        <button onclick="clearCanvas()">Clear</button>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <button onclick="saveNote()">Save Note</button>
+</div>
+<h2>Saved Notes</h2>
+<div id="notes"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
